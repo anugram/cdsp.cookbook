@@ -6,7 +6,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Preface](#_Chapter_01_Preface/chapter.md)
+   * [Preface](_Chapter_01_Preface/chapter.md)
    * [Installation](#installation)
    * [Usage](#usage)
       * [STDIN](#stdin)
