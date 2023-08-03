@@ -1,1 +1,0 @@
-# Securing MicroServices REST endpoints 
