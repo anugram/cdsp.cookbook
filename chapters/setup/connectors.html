@@ -83,6 +83,34 @@
                                         </svg>&nbsp;Connectors
                                     </a>
                                 </li>
+                                <!-- <li>
+                                    <a href="../../chapters/setup/ide.html" class="nav-link px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                        </svg>&nbsp;Setup IDE
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a href="../../chapters/setup/ansible.html" class="nav-link px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                        </svg>&nbsp;Setup Ansible
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../chapters/setup/powershell.html" class="nav-link px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                        </svg>&nbsp;Setup PowerShell
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../chapters/setup/terraform.html" class="nav-link px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                        </svg>&nbsp;Setup Terraform
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li>
@@ -113,45 +141,38 @@
             <div class="col py-3">
                 <h1>Understanding CipherTrust Connectors</h1>
                 <p class="lead">
-                    To use the samples in this ebook, you would require Thales CipherTrust Manager Community Edition installed and reachable from your orchestrator server. You would also need some of the many connectors provided by Thales CipherTrust Data Security Platform. <br /><br />
-                    In this chapter, we will work our way to setting up CipherTrust Manager in cloud, VM or servers. We will be using the free-forever CipherTrust Manager Community Edition. 
+                    CipherTrust Data Security Platform (CDSP) provides a set of connectors and SDKs that make a task as complex as data protection and meeting compliances like PCI DSS, GDPR, HIPAA, etc. much easier and much more developer/devops friendly.<br /><br />
+                    In this chapter, we will go over a list of such connectors and their use cases before we actually delve much deeper into using them in upcoming chapters. You can find more information at <a href="https://cpl.thalesgroup.com/encryption/data-security-platform" target="_blank">Thales Website</a>
                 <ul class="list-unstyled">
-                    <li><h3>Problem</h3> Deploy a single node CipherTrust Manager instance in public or private cloud or in a Virtual Machine</li>
                     <li><hr /></li>
                     <li>
-                        <h3>Solution</h3> 
-                        Solution depends on various factors like weather you want to deploy the CipherTrust Manager instance in public clouds like Azure, Google, AWS, or private cloud like VSphere or on a Virtual Machine. <br /><br />
-                        We will be covering some recipes in this chapter where you can deploy CipherTrust Manager manually, using tools like PowerShell or Terraform.
+                        <div class="container">
+                            <div class="row border">
+                                <div class="col-sm"><h6>Problem</h6></div>
+                                <div class="col-sm"><h6>Solution</h6></div>
+                                <div class="col-sm"><h6>Discussion</h6></div>
+                            </div>
+                            <div class="row border">
+                                <div class="col-sm">
+                                    Protecting sensitive data in RESTful calls
+                                </div>
+                                <div class="col-sm"><h6>Thales CipherTrust Data Protection Gateway</h6> It offers transparent data protection to any RESTful web service or microservice that leverage REST APIs. DPG is deployed between the client and web service and transparently protects sensitive data inline without modifying legacy or cloud native applications. DPG interprets RESTful data and performs data protection operations based on policies defined centrally in Thales’s CipherTrust Manager and operates seamlessly with other pod-supporting services.</div>
+                                <div class="col-sm">
+                                    <img src="../../_static/DPG-overview-diagram.png" alt="Data Protection Gateway Architecture Diagram" width="400px" />
+                                </div>
+                            </div>
+                            <div class="row border">
+                                <div class="col-sm">
+                                    Transparently protect data accessible from containers and containerized applications.
+                                </div>
+                                <div class="col-sm"><h6>CipherTrust Transparent Encryption for Kubernetes</h6> It enables protection of sensitive data on persistent volumes via encryption, user and process-based access controls, and data access logging. This solution enables developers to establish security controls inside of containers. With this extension for CipherTrust Transparent Encryption, data protection can be applied on a per-container basis, both to data inside of containers and to external storage accessible from containers.</div>
+                                <div class="col-sm">
+                                    <img src="../../_static/cte-kubernetes-diagram.png" alt="CipherTrust Transparent Encryption for Kubernetes" width="400px" />
+                                </div>
+                            </div>
+                        </div> 
                     </li>
                     <li><br /></li>
-                    <li>                        
-                        <h4 class="alert-heading">In cloud wih Terraform</h4>
-                        <p>To deploy CipherTrust Manager on Azure, Google, or Azure clouds using the respective marketplace images, refer to the documentation and corresponding Terraform Scripts here at <a href="https://github.com/thalescpl-io/CipherTrust_Manager/tree/master" target="_blank">GitHub</a></p>
-                    </li>
-                    <li><br /></li>
-                    <li>                        
-                        <h4 class="alert-heading">In cloud wih PowerShell</h4>
-                        <p>To deploy CipherTrust Manager on Azure using the respective marketplace images, refer to the sample PowerShell Script here at <a href="https://gist.github.com/anugram/4bf8c4f9bf2a0d7f47745607aaaded61" target="_blank">GitHub Gist</a></p>
-                    </li>
-                    <li><br /></li>
-                    <li>                        
-                        <h4 class="alert-heading">Deploy Manually</h4>
-                        <p>To deploy manually on public or private clouds refer to <a href="https://thalesdocs.com/ctp/cm/latest/get_started/deployment/virtual-deployment/index.html" target="_blank">ThalesDocs</a></p>
-                    </li>
-                    <li><hr /></li>
-                    <li>
-                        <h3>Resources</h3>
-                        <ul>
-                            <li>
-                                <div>Deploy CipherTrust Manager on AWS using Terraform</div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/KEz-jr2Hin4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </li>
-                            <li>
-                                <div>Deploy CipherTrust Manager on Google Cloud using Terraform</div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/q6jNmuq1ZUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
